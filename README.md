@@ -9,10 +9,10 @@ of an operational setting.
 This guide details how to:
 
 1. Set up a new loop back alias on an IP in a private block (`172.173.174.175`),
-2. Configure [dnsmasq](http://example.com) so that a specific domain routes to IP address of the loopback
+2. Configure [dnsmasq](https://thekelleys.org.uk/dnsmasq/doc.html) so that a specific domain routes to IP address of the loopback
 3. Update iptables within the VM running inside Docker Desktop so that the IP Address for the loopback routes to the host.
 
-Generally documentation for [dnsmasq](http://example.com) will suggest routing to `127.0.0.1` but
+Generally documentation for [dnsmasq](https://thekelleys.org.uk/dnsmasq/doc.html) will suggest routing to `127.0.0.1` but
 this will not work inside and outside the containers as `127.0.0.1` are different places. With this
 set up dnsmasq will alway route to `172.173.174.175` outside of the VM that resolves to the
 loopback while inside the VM it is routed to the Mac.
